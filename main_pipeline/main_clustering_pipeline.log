@@ -3432,3 +3432,1045 @@ Done! DataFrame is merged.
 Time of finish - 2023-07-19 14:41:46. 
             
 Time of executing - 0:00:44.414605.
+
+Time of start - 2023-07-19 14:58:14
+Arguments in use: 
+ - matrix filepath /mnt/wd/nsap/in_data1/chr11_matrix.ld 
+ - snplist filepath /mnt/wd/nsap/in_data1/chr11.snplist 
+ - method all 
+ - chr 11 
+ - eps 0.75 
+ - cluster_selection_epsilon 0.6 
+ - min_samples 2 
+
+
+all algorithm will be used...
+
+Extracting SNP list data from file...
+The SNP list for 11 chromosome is: 
+['rs2280543' 'rs10794305' 'rs3809109' ... 'rs10894919' 'rs1871265'
+ 'rs755526']
+With length of: 3351
+Extracting matrix data from file...
+Reshaping arrays...
+
+Performing clustering with DBSCAN...
+Estimated number of clusters: 602
+Silhouette score:  0.1639360072535943
+Calinski-Harabasz score:  3.891328487760562
+
+Writting results to database...
+
+Performing clustering with HDBSCAN...
+________________________________________________________________________________
+[Memory] Calling hdbscan.hdbscan_._hdbscan_generic...
+_hdbscan_generic(array([[0.      , ..., 0.999996],
+       ...,
+       [0.999996, ..., 0.      ]]), 2, 1.0, 'precomputed', None, 40, False)
+__________________________________________________hdbscan_generic - 0.4s, 0.0min
+Estimated number of clusters: 528
+Silhouette score:  0.09894340433769358
+Calinski-Harabasz score:  3.4036466167213826
+
+Writting results to database...
+Joinning SNP locations for 'A_chr11_CSM06MS2_EPS075MS2' table...
+528 HDBSCAN clusters for chromosome 11 has been written to the outfile.
+602 DBSCAN clusters for chromosome 11 has been written to the outfile.
+Haplotype restoring and testing for chromosome 11 is done!
+Working with file for 11 chromosome...
+             CHISQ CHR   DF        END       F_A      F_U  ...  LENGTH                   LOCUS         P  SIZE                                               SNPS      START
+3586  1.740000e+01  11  1.0   49977336  0.009295  0.03333  ...  814388    11:49162948-49977336  0.000030   3.0                   rs10839229|rs12222221|rs11601081   49162948
+3590  1.721000e+01  11  1.0   49488707  0.009259  0.03300  ...  325759    11:49162948-49488707  0.000033   2.0                              rs10839229|rs12222221   49162948
+3584  1.801000e+01  11  2.0   49977336       NaN      NaN  ...  814388    11:49162948-49977336  0.000123   3.0                   rs10839229|rs12222221|rs11601081   49162948
+3588  1.769000e+01  11  2.0   49488707       NaN      NaN  ...  325759    11:49162948-49488707  0.000144   2.0                              rs10839229|rs12222221   49162948
+380   1.295000e+01  11  1.0    6810464  0.033440  0.06759  ...   70156      11:6740308-6810464  0.000320   6.0  rs12223353|rs1354803|rs670151|rs11041009|rs146...    6740308
+...            ...  ..  ...        ...       ...      ...  ...     ...                     ...       ...   ...                                                ...        ...
+2862  8.588000e-07  11  1.0   45606983  0.121700  0.12170  ...   52032    11:45554951-45606983  0.999300   4.0              rs896344|rs1565224|rs275586|rs1488682   45554951
+6670  4.130000e-07  11  1.0  118005119  0.017110  0.01711  ...   41353  11:117963766-118005119  0.999500   4.0            rs11216740|rs1894177|rs3741311|rs868344  117963766
+6700  4.721000e-07  11  1.0  118144804  0.248200  0.24820  ...   61140  11:118083664-118144804  0.999500   3.0                      rs1715429|rs1624780|rs4938493  118083664
+1639  1.367000e-07  11  1.0   21041759  0.080930  0.08092  ...   24362    11:21017397-21041759  0.999700   4.0           rs2896623|rs4644637|rs7941875|rs11025878   21017397
+4046  1.895000e-08  11  1.0   69883969  0.083600  0.08361  ...   13191    11:69870778-69883969  0.999900   2.0                                rs4980746|rs7929885   69870778
+
+[8022 rows x 13 columns]
+Created omnibus outfile...
+Created non omnibus outfile...
+Created not filtered outfile...
+Done! DataFrame is merged.
+Working with file for 11 chromosome...
+              CHISQ CHR   DF        END       F_A  ...                   LOCUS         P  SIZE                                               SNPS      START
+16891  1.903000e+01  11  1.0   49977336  0.007861  ...    11:48085968-49977336  0.000013   4.0         rs7943570|rs10839229|rs12222221|rs11601081   48085968
+16897  1.884000e+01  11  1.0   49488707  0.007831  ...    11:48085968-49488707  0.000014   3.0                    rs7943570|rs10839229|rs12222221   48085968
+17127  1.498000e+01  11  1.0   55849535  0.009861  ...    11:47038220-55849535  0.000109  16.0  rs4494268|rs1051006|rs7946766|rs6485802|rs1113...   47038220
+11526  1.343000e+01  11  1.0  115792775  0.293600  ...  11:115622993-115792775  0.000247   4.0           rs6589497|rs11215687|rs10502208|rs374729  115622993
+17178  1.324000e+01  11  1.0   55091268  0.009579  ...    11:47038220-55091268  0.000275  13.0  rs4494268|rs1051006|rs7946766|rs6485802|rs1113...   47038220
+...             ...  ..  ...        ...       ...  ...                     ...       ...   ...                                                ...        ...
+9058   3.660000e-08  11  1.0  123444860  0.054740  ...  11:123399541-123444860  0.999800   5.0    rs2714068|rs4936824|rs850291|rs863731|rs2078158  123399541
+12736  7.219000e-08  11  1.0  129319828  0.014090  ...  11:129280473-129319828  0.999800   4.0           rs2323632|rs11607460|rs3019793|rs3019117  129280473
+9943   1.967000e-08  11  1.0   61664992  0.086530  ...    11:61627881-61664992  0.999900   3.0                         rs174611|rs1000778|rs13966   61627881
+7251   1.326000e-08  11  1.0   97932720  0.023230  ...    11:97685864-97932720  0.999900   7.0  rs10749931|rs2597579|rs4494277|rs10789753|rs45...   97685864
+9582   3.601000e-09  11  1.0   35392601  0.033900  ...    11:35230605-35392601  1.000000   8.0  rs2421826|rs8193|rs1570216|rs3763888|rs3794087...   35230605
+
+[17347 rows x 13 columns]
+Created omnibus outfile...
+Created non omnibus outfile...
+Created not filtered outfile...
+Done! DataFrame is merged.
+
+Time of finish - 2023-07-19 14:59:02. 
+            
+Time of executing - 0:00:48.261296.
+
+Time of start - 2023-07-19 15:01:17
+Arguments in use: 
+ - matrix filepath /mnt/wd/nsap/in_data1/chr12_matrix.ld 
+ - snplist filepath /mnt/wd/nsap/in_data1/chr12.snplist 
+ - method all 
+ - chr 12 
+ - eps 0.8 
+ - cluster_selection_epsilon 0.7 
+ - min_samples 2 
+
+
+all algorithm will be used...
+
+Extracting SNP list data from file...
+The SNP list for 12 chromosome is: 
+['rs9668025' 'rs1532609' 'rs881194' ... 'rs2036288' 'rs4758929'
+ 'rs2292029']
+With length of: 3219
+Extracting matrix data from file...
+Reshaping arrays...
+
+Performing clustering with DBSCAN...
+Estimated number of clusters: 593
+Silhouette score:  0.15700330086636072
+Calinski-Harabasz score:  3.601511848790491
+
+Writting results to database...
+
+Performing clustering with HDBSCAN...
+________________________________________________________________________________
+[Memory] Calling hdbscan.hdbscan_._hdbscan_generic...
+_hdbscan_generic(array([[0.      , ..., 0.999786],
+       ...,
+       [0.999786, ..., 0.      ]]), 2, 1.0, 'precomputed', None, 40, False)
+__________________________________________________hdbscan_generic - 0.4s, 0.0min
+Estimated number of clusters: 506
+Silhouette score:  0.09038653144005804
+Calinski-Harabasz score:  3.125616101463006
+
+Writting results to database...
+Joinning SNP locations for 'A_chr12_CSM07MS2_EPS08MS2' table...
+506 HDBSCAN clusters for chromosome 12 has been written to the outfile.
+593 DBSCAN clusters for chromosome 12 has been written to the outfile.
+Haplotype restoring and testing for chromosome 12 is done!
+Working with file for 12 chromosome...
+             CHISQ CHR   DF        END       F_A      F_U  ...  LENGTH                   LOCUS         P  SIZE                                               SNPS      START
+1080  1.522000e+01  12  1.0   14065831  0.010560  0.03372  ...   84505    12:13981326-14065831  0.000096   4.0          rs2160732|rs10845853|rs10492142|rs7297101   13981326
+4989  1.361000e+01  12  1.0   68808660  0.177700  0.24590  ...     212    12:68808448-68808660  0.000225   2.0                               rs10878824|rs7297456   68808448
+7411  1.297000e+01  12  1.0  108496508  0.022170  0.05102  ...  163514  12:108332994-108496508  0.000316   7.0  rs1895941|rs11113611|rs10507221|rs1896058|rs20...  108332994
+4592  1.249000e+01  12  1.0   63004002  0.015740  0.03984  ...  144582    12:62859420-63004002  0.000410   4.0         rs7308021|rs12300696|rs12308140|rs10735910   62859420
+8658  1.205000e+01  12  1.0  124591385  0.009259  0.02859  ...  191835  12:124399550-124591385  0.000517   5.0    rs1316952|rs863750|rs7296124|rs1716409|rs825490  124399550
+...            ...  ..  ...        ...       ...      ...  ...     ...                     ...       ...   ...                                                ...        ...
+5940  5.376000e-08  12  1.0   80394465  0.044290  0.04429  ...  265872    12:80128593-80394465  0.999800   3.0                     rs1592672|rs7956796|rs10862027   80128593
+7185  5.668000e-08  12  1.0  104287441  0.026340  0.02634  ...   44220  12:104243221-104287441  0.999800   2.0                               rs1992208|rs10861138  104243221
+7238  3.169000e-08  12  1.0  105709809  0.170100  0.17010  ...   31651  12:105678158-105709809  0.999900   2.0                                rs4964354|rs1864892  105678158
+7168  2.730000e-08  12  1.0  104330515  0.016410  0.01641  ...   87294  12:104243221-104330515  0.999900   5.0  rs1992208|rs10861138|rs1125322|rs1183212|rs108...  104243221
+5556  2.795000e-08  12  1.0   74429110  0.011190  0.01119  ...  394593    12:74034517-74429110  0.999900   6.0  rs2730512|rs7970034|rs7299914|rs1439984|rs7133...   74034517
+
+[9426 rows x 13 columns]
+Created omnibus outfile...
+Created non omnibus outfile...
+Created not filtered outfile...
+Done! DataFrame is merged.
+Working with file for 12 chromosome...
+              CHISQ CHR    DF        END      F_A      F_U  ...  LENGTH                   LOCUS         P  SIZE                                               SNPS      START
+13105  1.373000e+01  12   1.0   14065831  0.01144  0.03380  ...   84505    12:13981326-14065831  0.000211   3.0                     rs2160732|rs10845853|rs7297101   13981326
+13094  1.211000e+01  12   1.0   14101954  0.01076  0.03115  ...  120628    12:13981326-14101954  0.000501   4.0            rs2160732|rs10845853|rs7297101|rs219922   13981326
+14896  1.200000e+01  12   1.0   27755458  0.02399  0.05212  ...   62733    12:27692725-27755458  0.000531   4.0            rs306655|rs899069|rs10506025|rs12319361   27692725
+10715  1.169000e+01  12   1.0   89255723  0.04757  0.08466  ...   55128    12:89200595-89255723  0.000630   2.0                                rs454833|rs10506959   89200595
+14040  1.158000e+01  12   1.0   28025196  0.03625  0.06967  ...   52846    12:27972350-28025196  0.000665   4.0           rs9988960|rs10771380|rs258394|rs10843013   27972350
+...             ...  ..   ...        ...      ...      ...  ...     ...                     ...       ...   ...                                                ...        ...
+8158   8.812000e-08  12   1.0  129854922  0.14550  0.14550  ...   12332  12:129842590-129854922  0.999800   4.0            rs10847836|rs11060283|rs900263|rs900259  129842590
+4979   7.509000e-09  12   1.0  129481599  0.02681  0.02681  ...   38820  12:129442779-129481599  0.999900   6.0  rs1795672|rs470477|rs470757|rs651352|rs6486749...  129442779
+10651  2.795000e-08  12   1.0   74429110  0.01119  0.01119  ...  394593    12:74034517-74429110  0.999900   6.0  rs2730512|rs7970034|rs7299914|rs1439984|rs7133...   74034517
+14565  5.303000e+00  12  24.0   31987426      NaN      NaN  ...  473427    12:31513999-31987426  1.000000   6.0  rs2090772|rs10771858|rs900610|rs4931536|rs1084...   31513999
+14591  2.796000e+00  12  17.0   31939113      NaN      NaN  ...  425114    12:31513999-31939113  1.000000   5.0  rs2090772|rs10771858|rs900610|rs4931536|rs1084...   31513999
+
+[16988 rows x 13 columns]
+Created omnibus outfile...
+Created non omnibus outfile...
+Created not filtered outfile...
+Done! DataFrame is merged.
+
+Time of finish - 2023-07-19 15:02:01. 
+            
+Time of executing - 0:00:44.740051.
+
+Time of start - 2023-07-19 15:04:26
+Arguments in use: 
+ - matrix filepath /mnt/wd/nsap/in_data1/chr13_matrix.ld 
+ - snplist filepath /mnt/wd/nsap/in_data1/chr13.snplist 
+ - method all 
+ - chr 13 
+ - eps 0.8 
+ - cluster_selection_epsilon 0.8 
+ - min_samples 2 
+
+
+all algorithm will be used...
+
+Extracting SNP list data from file...
+The SNP list for 13 chromosome is: 
+['rs1838114' 'rs1556650' 'rs1889574' ... 'rs7323386' 'rs7331784'
+ 'rs7327124']
+With length of: 2428
+Extracting matrix data from file...
+Reshaping arrays...
+
+Performing clustering with DBSCAN...
+Estimated number of clusters: 452
+Silhouette score:  0.1457863527666563
+Calinski-Harabasz score:  3.320531548949172
+
+Writting results to database...
+
+Performing clustering with HDBSCAN...
+________________________________________________________________________________
+[Memory] Calling hdbscan.hdbscan_._hdbscan_generic...
+_hdbscan_generic(array([[0.     , ..., 0.99999],
+       ...,
+       [0.99999, ..., 0.     ]]), 2, 1.0, 'precomputed', None, 40, False)
+__________________________________________________hdbscan_generic - 0.2s, 0.0min
+Estimated number of clusters: 384
+Silhouette score:  0.07863531364857296
+Calinski-Harabasz score:  2.798942833951757
+
+Writting results to database...
+Joinning SNP locations for 'A_chr13_CSM08MS2_EPS08MS2' table...
+384 HDBSCAN clusters for chromosome 13 has been written to the outfile.
+452 DBSCAN clusters for chromosome 13 has been written to the outfile.
+Haplotype restoring and testing for chromosome 13 is done!
+Working with file for 13 chromosome...
+             CHISQ CHR   DF       END      F_A      F_U  ...  LENGTH                 LOCUS         P  SIZE                                               SNPS     START
+2486  1.095000e+01  13  1.0  50198158  0.50570  0.58290  ...   53545  13:50144613-50198158  0.000938   3.0                     rs11148151|rs5007254|rs4942859  50144613
+4709  1.092000e+01  13  1.0  81000505  0.34370  0.41800  ...   66897  13:80933608-81000505  0.000952   3.0                       rs496932|rs1215930|rs1999494  80933608
+4697  1.012000e+01  13  1.0  81150170  0.08441  0.12830  ...  216562  13:80933608-81150170  0.001464   4.0             rs496932|rs1215930|rs1999494|rs2154130  80933608
+4679  9.654000e+00  13  1.0  81161963  0.07352  0.11440  ...  228355  13:80933608-81161963  0.001889   5.0   rs496932|rs1215930|rs1999494|rs2154130|rs7321702  80933608
+4106  9.525000e+00  13  1.0  70578513  0.23430  0.29720  ...   26100  13:70552413-70578513  0.002027   3.0                     rs4612945|rs9592672|rs11619708  70552413
+...            ...  ..  ...       ...      ...      ...  ...     ...                   ...       ...   ...                                                ...       ...
+882   2.674000e-07  13  1.0  32736085  0.01299  0.01299  ...   26172  13:32709913-32736085  0.999600   2.0                               rs17077115|rs9567327  32709913
+4421  1.356000e-07  13  1.0  76905589  0.03584  0.03585  ...   30616  13:76874973-76905589  0.999700   4.0           rs1146878|rs7317053|rs9318420|rs10507852  76874973
+2226  7.494000e-08  13  1.0  47174585  0.73050  0.73050  ...  105293  13:47069292-47174585  0.999800   2.0                                rs7336742|rs4942556  47069292
+3349  5.304000e-08  13  1.0  61684681  0.12460  0.12460  ...   82777  13:61601904-61684681  0.999800   2.0                                rs9539012|rs3121782  61601904
+3684  1.476000e-09  13  1.0  68180116  0.02076  0.02076  ...  322013  13:67858103-68180116  1.000000  13.0  rs2991416|rs2991386|rs9541072|rs3013580|rs2991...  67858103
+
+[7141 rows x 13 columns]
+Created omnibus outfile...
+Created non omnibus outfile...
+Created not filtered outfile...
+Done! DataFrame is merged.
+Working with file for 13 chromosome...
+              CHISQ CHR    DF        END      F_A      F_U  ...  LENGTH                   LOCUS         P  SIZE                                               SNPS      START
+2762   1.504000e+01  13   1.0   38335339  0.09317  0.14920  ...   31318    13:38304021-38335339  0.000105   2.0                                rs1360625|rs4399429   38304021
+2758   1.484000e+01  13   1.0   38345195  0.09363  0.14940  ...   41174    13:38304021-38345195  0.000117   3.0                     rs1360625|rs4399429|rs11147671   38304021
+4761   1.460000e+01  13   1.0  101142329  0.04653  0.09479  ...  440211  13:100702118-101142329  0.000133  12.0  rs7986007|rs1433228|rs7981068|rs9517971|rs6491...  100702118
+4743   1.362000e+01  13   1.0  101147019  0.04762  0.09475  ...  444901  13:100702118-101147019  0.000223  13.0  rs7986007|rs1433228|rs7981068|rs9517971|rs6491...  100702118
+4779   1.311000e+01  13   1.0  101075864  0.04770  0.09055  ...  373746  13:100702118-101075864  0.000294  11.0  rs7986007|rs1433228|rs7981068|rs9517971|rs6491...  100702118
+...             ...  ..   ...        ...      ...      ...  ...     ...                     ...       ...   ...                                                ...        ...
+6609   2.990000e+00  13  16.0  112683679      NaN      NaN  ...  178476  13:112505203-112683679  0.999800   5.0   rs4293272|rs1277788|rs9550222|rs523042|rs2031293  112505203
+5604   5.217000e-08  13   1.0   72611502  0.09775  0.09775  ...  193183    13:72418319-72611502  0.999800   6.0  rs10492536|rs7336343|rs9542775|rs936457|rs2810...   72418319
+3482   7.494000e-08  13   1.0   47174585  0.73050  0.73050  ...  105293    13:47069292-47174585  0.999800   2.0                                rs7336742|rs4942556   47069292
+4060   2.854000e+00  13  16.0  105031365      NaN      NaN  ...  113733  13:104917632-105031365  0.999900   7.0  rs3916947|rs9300909|rs1590919|rs880643|rs18314...  104917632
+11095  1.476000e-09  13   1.0   68180116  0.02076  0.02076  ...  322013    13:67858103-68180116  1.000000  13.0  rs2991416|rs2991386|rs9541072|rs3013580|rs2991...   67858103
+
+[13567 rows x 13 columns]
+Created omnibus outfile...
+Created non omnibus outfile...
+Created not filtered outfile...
+Done! DataFrame is merged.
+
+Time of finish - 2023-07-19 15:04:56. 
+            
+Time of executing - 0:00:29.957439.
+
+Time of start - 2023-07-19 15:05:41
+Arguments in use: 
+ - matrix filepath /mnt/wd/nsap/in_data1/chr14_matrix.ld 
+ - snplist filepath /mnt/wd/nsap/in_data1/chr14.snplist 
+ - method all 
+ - chr 14 
+ - eps 0.8 
+ - cluster_selection_epsilon 0.75 
+ - min_samples 2 
+
+
+all algorithm will be used...
+
+Extracting SNP list data from file...
+The SNP list for 14 chromosome is: 
+['rs17114296' 'rs1953999' 'rs9919950' ... 'rs3784230' 'rs4074453'
+ 'rs885883']
+With length of: 2236
+Extracting matrix data from file...
+Reshaping arrays...
+
+Performing clustering with DBSCAN...
+Estimated number of clusters: 420
+Silhouette score:  0.15706302332019142
+Calinski-Harabasz score:  3.465109729124914
+
+Writting results to database...
+
+Performing clustering with HDBSCAN...
+________________________________________________________________________________
+[Memory] Calling hdbscan.hdbscan_._hdbscan_generic...
+_hdbscan_generic(array([[0.      , ..., 0.999817],
+       ...,
+       [0.999817, ..., 0.      ]]), 2, 1.0, 'precomputed', None, 40, False)
+__________________________________________________hdbscan_generic - 0.2s, 0.0min
+Estimated number of clusters: 347
+Silhouette score:  0.08897490271001436
+Calinski-Harabasz score:  3.0065007244055697
+
+Writting results to database...
+Joinning SNP locations for 'A_chr14_CSM075MS2_EPS08MS2' table...
+347 HDBSCAN clusters for chromosome 14 has been written to the outfile.
+420 DBSCAN clusters for chromosome 14 has been written to the outfile.
+Haplotype restoring and testing for chromosome 14 is done!
+Working with file for 14 chromosome...
+             CHISQ CHR   DF        END      F_A      F_U HAPLOTYPE  LENGTH                   LOCUS         P  SIZE                                       SNPS      START
+6032  1.290000e+01  14  1.0   98788406  0.16700  0.10670        TT   43366    14:98745040-98788406  0.000328   2.0                        rs8015019|rs7148865   98745040
+6390  1.125000e+01  14  1.0  104484646  0.27290  0.34440       CCC   87610  14:104397036-104484646  0.000798   3.0           rs10467890|rs11851097|rs12589669  104397036
+1565  1.035000e+01  14  1.0   44397890  0.29400  0.22660       TGC   62553    14:44335337-44397890  0.001296   3.0             rs12434045|rs2208774|rs1957480   44335337
+6031  1.318000e+01  14  2.0   98788406      NaN      NaN   OMNIBUS   43366    14:98745040-98788406  0.001372   2.0                        rs8015019|rs7148865   98745040
+4813  9.770000e+00  14  1.0   78993170  0.35670  0.42740       GTA  186997    14:78806173-78993170  0.001774   3.0               rs214005|rs368692|rs12882387   78806173
+...            ...  ..  ...        ...      ...      ...       ...     ...                     ...       ...   ...                                        ...        ...
+4861  3.741000e-07  14  1.0   79901283  0.28700  0.28700        GT   64253    14:79837030-79901283  0.999500   2.0                      rs12895906|rs11625620   79837030
+1056  2.447000e-07  14  1.0   36198782  0.10330  0.10330      GACT  268587    14:35930195-36198782  0.999600   4.0  rs4982279|rs9322955|rs12431807|rs10147261   35930195
+2777  2.113000e-07  14  1.0   56920900  0.02262  0.02262      TTGT  105086    14:56815814-56920900  0.999600   4.0   rs1152498|rs10142596|rs1307538|rs1300662   56815814
+3323  6.695000e-08  14  1.0   62625732  0.31020  0.31020        TA   32435    14:62593297-62625732  0.999800   2.0                       rs1954494|rs12879403   62593297
+5621  1.685000e-08  14  1.0   91458156  0.17020  0.17020      CTCG  147111    14:91311045-91458156  0.999900   4.0    rs7153606|rs1286264|rs1296092|rs1286060   91311045
+
+[6470 rows x 13 columns]
+Created omnibus outfile...
+Created non omnibus outfile...
+Created not filtered outfile...
+Done! DataFrame is merged.
+Working with file for 14 chromosome...
+             CHISQ CHR    DF       END       F_A      F_U  ...  LENGTH                 LOCUS         P  SIZE                                               SNPS     START
+8101  1.426000e+01  14   1.0  99565285  0.008329  0.02901  ...   56050  14:99509235-99565285  0.000160   7.0  rs1257687|rs7141243|rs11625680|rs807363|rs2029...  99509235
+1128  1.303000e+01  14   1.0  95007657  0.160300  0.22460  ...   10162  14:94997495-95007657  0.000306   2.0                               rs4905214|rs11623139  94997495
+4729  1.237000e+01  14   1.0  98815286  0.142900  0.08781  ...   26880  14:98788406-98815286  0.000436   2.0                                rs7148865|rs7152787  98788406
+1693  1.219000e+01  14   1.0  96749759  0.012250  0.03380  ...   70785  14:96678974-96749759  0.000481   4.0            rs4900312|rs2069605|rs2369522|rs3742476  96678974
+4725  1.210000e+01  14   1.0  98821528  0.143700  0.08884  ...   33122  14:98788406-98821528  0.000503   3.0                      rs7148865|rs7152787|rs7156559  98788406
+...            ...  ..   ...       ...       ...      ...  ...     ...                   ...       ...   ...                                                ...       ...
+2750  4.828000e+00  14  20.0  92988495       NaN      NaN  ...  125136  14:92863359-92988495  0.999800   5.0  rs7151174|rs4904900|rs7143416|rs7156885|rs7141239  92863359
+4843  1.891000e-08  14   1.0  22590996  0.026240  0.02624  ...   46603  14:22544393-22590996  0.999900   5.0   rs7142153|rs990962|rs4572291|rs1040302|rs2178785  22544393
+2682  1.070000e+01  14  34.0  93026057       NaN      NaN  ...  162698  14:92863359-93026057  1.000000   7.0  rs7151174|rs4904900|rs7143416|rs7156885|rs7141...  92863359
+2718  7.702000e+00  14  30.0  93005721       NaN      NaN  ...  142362  14:92863359-93005721  1.000000   6.0  rs7151174|rs4904900|rs7143416|rs7156885|rs7141...  92863359
+5853  1.260000e-09  14   1.0  89996043  0.169900  0.16990  ...   34512  14:89961531-89996043  1.000000   3.0                        rs243229|rs1287404|rs448069  89961531
+
+[11406 rows x 13 columns]
+Created omnibus outfile...
+Created non omnibus outfile...
+Created not filtered outfile...
+Done! DataFrame is merged.
+
+Time of finish - 2023-07-19 15:06:06. 
+            
+Time of executing - 0:00:25.270175.
+
+Time of start - 2023-07-19 15:06:13
+Arguments in use: 
+ - matrix filepath /mnt/wd/nsap/in_data1/chr15_matrix.ld 
+ - snplist filepath /mnt/wd/nsap/in_data1/chr15.snplist 
+ - method all 
+ - chr 15 
+ - eps 0.8 
+ - cluster_selection_epsilon 0.65 
+ - min_samples 2 
+
+
+all algorithm will be used...
+
+Extracting SNP list data from file...
+The SNP list for 15 chromosome is: 
+['rs6599770' 'rs5006363' 'rs2289815' ... 'rs12324658' 'rs8035839'
+ 'rs352743']
+With length of: 1983
+Extracting matrix data from file...
+Reshaping arrays...
+
+Performing clustering with DBSCAN...
+Estimated number of clusters: 362
+Silhouette score:  0.1554906378710976
+Calinski-Harabasz score:  3.499932909123781
+
+Writting results to database...
+
+Performing clustering with HDBSCAN...
+________________________________________________________________________________
+[Memory] Calling hdbscan.hdbscan_._hdbscan_generic...
+_hdbscan_generic(array([[0.      , ..., 0.999429],
+       ...,
+       [0.999429, ..., 0.      ]]), 2, 1.0, 'precomputed', None, 40, False)
+__________________________________________________hdbscan_generic - 0.2s, 0.0min
+Estimated number of clusters: 324
+Silhouette score:  0.08552140781393275
+Calinski-Harabasz score:  2.9000749382352486
+
+Writting results to database...
+Joinning SNP locations for 'A_chr15_CSM065MS2_EPS08MS2' table...
+324 HDBSCAN clusters for chromosome 15 has been written to the outfile.
+362 DBSCAN clusters for chromosome 15 has been written to the outfile.
+Haplotype restoring and testing for chromosome 15 is done!
+Working with file for 15 chromosome...
+             CHISQ CHR   DF       END       F_A      F_U  ...   LENGTH                 LOCUS         P  SIZE                                               SNPS     START
+3998  1.099000e+01  15  1.0  83663941  0.010110  0.03222  ...  1124510  15:82539431-83663941  0.000918  15.0  rs7183805|rs1145173|rs783544|rs4779041|rs47790...  82539431
+4027  1.080000e+01  15  1.0  83623423  0.009963  0.03159  ...  1083992  15:82539431-83623423  0.001016  14.0  rs7183805|rs1145173|rs783544|rs4779041|rs47790...  82539431
+4079  1.058000e+01  15  1.0  83551313  0.009562  0.02932  ...  1011882  15:82539431-83551313  0.001146  12.0  rs7183805|rs1145173|rs783544|rs4779041|rs47790...  82539431
+5030  1.342000e+01  15  2.0  91483392       NaN      NaN  ...    30797  15:91452595-91483392  0.001218   2.0                               rs2106673|rs11073961  91452595
+1562  9.652000e+00  15  1.0  51454932  0.072780  0.03711  ...   392191  15:51062741-51454932  0.001892   4.0          rs8038437|rs11853182|rs11070836|rs6493482  51062741
+...            ...  ..  ...       ...       ...      ...  ...      ...                   ...       ...   ...                                                ...       ...
+2049  5.840000e-07  15  1.0  59599049  0.025800  0.02581  ...    82658  15:59516391-59599049  0.999400   5.0  rs3794492|rs6494081|rs17236536|rs2899647|rs747723  59516391
+4063  2.511000e-07  15  1.0  83606232  0.021780  0.02178  ...  1066801  15:82539431-83606232  0.999600  13.0  rs7183805|rs1145173|rs783544|rs4779041|rs47790...  82539431
+4819  1.793000e-07  15  1.0  87229547  0.182700  0.18270  ...    64369  15:87165178-87229547  0.999700   4.0           rs2346710|rs10520634|rs4608306|rs1452454  87165178
+3907  1.017000e-01  15  5.0  82055083       NaN      NaN  ...   209930  15:81845153-82055083  0.999800   5.0  rs4778908|rs2624996|rs1482943|rs8041133|rs7162035  81845153
+5378  5.877000e-09  15  1.0  95268494  0.437700  0.43770  ...     1684  15:95266810-95268494  0.999900   2.0                                rs8036171|rs4984406  95266810
+
+[5843 rows x 13 columns]
+Created omnibus outfile...
+Created non omnibus outfile...
+Created not filtered outfile...
+Done! DataFrame is merged.
+Working with file for 15 chromosome...
+             CHISQ CHR   DF        END      F_A      F_U  ...  LENGTH                   LOCUS         P  SIZE                                               SNPS      START
+4071  1.394000e+01  15  1.0   36034093  0.01186  0.03665  ...   72839    15:35961254-36034093  0.000189   8.0  rs9920881|rs4923689|rs1160439|rs2879653|rs5017...   35961254
+8288  1.136000e+01  15  1.0   33185277  0.18210  0.24480  ...   18106    15:33167171-33185277  0.000749   3.0                       rs12595789|rs347940|rs347931   33167171
+5594  1.126000e+01  15  1.0   40195874  0.02119  0.04924  ...  508747    15:39687127-40195874  0.000790  10.0  rs8043207|rs4462564|rs4603529|rs899285|rs14786...   39687127
+8292  1.112000e+01  15  1.0   33177670  0.18280  0.24490  ...   10499    15:33167171-33177670  0.000854   2.0                                rs12595789|rs347940   33167171
+3401  1.342000e+01  15  2.0   91483392      NaN      NaN  ...   30797    15:91452595-91483392  0.001218   2.0                               rs2106673|rs11073961   91452595
+...            ...  ..  ...        ...      ...      ...  ...     ...                     ...       ...   ...                                                ...        ...
+9428  2.791000e-08  15  1.0   50555011  0.08899  0.08899  ...  133181    15:50421830-50555011  0.999900   4.0             rs7177316|rs4774557|rs2853766|rs860526   50421830
+8842  1.246000e-08  15  1.0   49329436  0.01079  0.01079  ...   75475    15:49253961-49329436  0.999900   4.0           rs8031813|rs4474633|rs11854184|rs4775798   49253961
+4061  5.877000e-09  15  1.0   95268494  0.43770  0.43770  ...    5287    15:95263207-95268494  0.999900   2.0                               rs17664293|rs4984406   95263207
+4023  5.877000e-09  15  1.0   95266810  0.43770  0.43770  ...   15835    15:95250975-95266810  0.999900   2.0                               rs17633190|rs8036171   95250975
+3006  8.086000e-09  15  1.0  100655307  0.03409  0.03409  ...  155942  15:100499365-100655307  0.999900   8.0  rs745104|rs873843|rs2573660|rs990422|rs4633693...  100499365
+
+[9781 rows x 13 columns]
+Created omnibus outfile...
+Created non omnibus outfile...
+Created not filtered outfile...
+Done! DataFrame is merged.
+
+Time of finish - 2023-07-19 15:06:35. 
+            
+Time of executing - 0:00:22.002747.
+
+Time of start - 2023-07-19 15:06:54
+Arguments in use: 
+ - matrix filepath /mnt/wd/nsap/in_data1/chr16_matrix.ld 
+ - snplist filepath /mnt/wd/nsap/in_data1/chr16.snplist 
+ - method all 
+ - chr 16 
+ - eps 0.8 
+ - cluster_selection_epsilon 0.75 
+ - min_samples 2 
+
+
+all algorithm will be used...
+
+Extracting SNP list data from file...
+The SNP list for 16 chromosome is: 
+['rs216596' 'rs216606' 'rs3785309' ... 'rs2241032' 'rs2078478' 'rs7196459']
+With length of: 2061
+Extracting matrix data from file...
+Reshaping arrays...
+
+Performing clustering with DBSCAN...
+Estimated number of clusters: 396
+Silhouette score:  0.1551636245118242
+Calinski-Harabasz score:  3.3696304024312385
+
+Writting results to database...
+
+Performing clustering with HDBSCAN...
+________________________________________________________________________________
+[Memory] Calling hdbscan.hdbscan_._hdbscan_generic...
+_hdbscan_generic(array([[0.      , ..., 0.999152],
+       ...,
+       [0.999152, ..., 0.      ]]), 2, 1.0, 'precomputed', None, 40, False)
+__________________________________________________hdbscan_generic - 0.2s, 0.0min
+Estimated number of clusters: 338
+Silhouette score:  0.09239129467567674
+Calinski-Harabasz score:  2.9017594981775057
+
+Writting results to database...
+Joinning SNP locations for 'A_chr16_CSM075MS2_EPS08MS2' table...
+338 HDBSCAN clusters for chromosome 16 has been written to the outfile.
+396 DBSCAN clusters for chromosome 16 has been written to the outfile.
+Haplotype restoring and testing for chromosome 16 is done!
+Working with file for 16 chromosome...
+             CHISQ CHR   DF       END      F_A      F_U  ...  LENGTH                 LOCUS         P  SIZE                                               SNPS     START
+4577  1.777000e+01  16  3.0  80727754      NaN      NaN  ...   11297  16:80716457-80727754  0.000490   2.0                                 rs930744|rs7202548  80716457
+4578  1.143000e+01  16  1.0  80727754  0.33750  0.41310  ...   11297  16:80716457-80727754  0.000721   2.0                                 rs930744|rs7202548  80716457
+2774  1.115000e+01  16  1.0  49732996  0.04756  0.01702  ...    5422  16:49727574-49732996  0.000842   2.0                               rs1477023|rs11076496  49727574
+2769  1.067000e+01  16  1.0  49743137  0.04307  0.01462  ...   15563  16:49727574-49743137  0.001090   3.0                     rs1477023|rs11076496|rs8055357  49727574
+4576  1.061000e+01  16  1.0  80753476  0.55000  0.47360  ...   37019  16:80716457-80753476  0.001125   3.0                       rs930744|rs7202548|rs1011097  80716457
+...            ...  ..  ...       ...      ...      ...  ...     ...                   ...       ...   ...                                                ...       ...
+3667  1.211000e-06  16  1.0  64395652  0.10970  0.10970  ...  119275  16:64276377-64395652  0.999100   4.0            rs2926138|rs1437145|rs2917709|rs1437163  64276377
+4521  7.872000e-07  16  1.0  80146783  0.01199  0.01199  ...  179459  16:79967324-80146783  0.999300   5.0  rs4132185|rs4545829|rs7187382|rs10514480|rs488...  79967324
+2407  2.646000e-07  16  1.0  26640406  0.17300  0.17300  ...   52913  16:26587493-26640406  0.999600   2.0                                rs11866811|rs237131  26587493
+678   1.455000e-07  16  1.0   8330492  0.46560  0.46560  ...    5504    16:8324988-8330492  0.999700   2.0                                rs1868970|rs5015251   8324988
+2881  1.311000e-08  16  1.0  51123801  0.14900  0.14900  ...   45409  16:51078392-51123801  0.999900   6.0  rs2160485|rs8060595|rs956141|rs10521220|rs9302...  51078392
+
+[5383 rows x 13 columns]
+Created omnibus outfile...
+Created non omnibus outfile...
+Created not filtered outfile...
+Done! DataFrame is merged.
+Working with file for 16 chromosome...
+             CHISQ CHR    DF       END       F_A      F_U  ...  LENGTH                 LOCUS         P  SIZE                                               SNPS     START
+8862  1.575000e+01  16   1.0  58006269  0.512600  0.41900  ...   55284  16:57950985-58006269  0.000072   4.0             rs3991716|rs8052097|rs152139|rs3888264  57950985
+4326  1.365000e+01  16   1.0  10261812  0.009174  0.03331  ...  239093  16:10022719-10261812  0.000220  14.0  rs11074502|rs3104703|rs6497599|rs2243716|rs384...  10022719
+4354  1.331000e+01  16   1.0  10248860  0.007687  0.02899  ...  226141  16:10022719-10248860  0.000264  13.0  rs11074502|rs3104703|rs6497599|rs2243716|rs384...  10022719
+4292  1.280000e+01  16   1.0  10293477  0.009869  0.03495  ...  270758  16:10022719-10293477  0.000347  15.0  rs11074502|rs3104703|rs6497599|rs2243716|rs384...  10022719
+8853  1.161000e+01  16   1.0  58028946  0.502900  0.42150  ...   77961  16:57950985-58028946  0.000656   5.0   rs3991716|rs8052097|rs152139|rs3888264|rs1055273  57950985
+...            ...  ..   ...       ...       ...      ...  ...     ...                   ...       ...   ...                                                ...       ...
+2408  4.212000e-07  16   1.0  24264538  0.273100  0.27310  ...   26679  16:24237859-24264538  0.999500   3.0                      rs198156|rs12149348|rs4787924  24237859
+3161  2.973000e-07  16   1.0   3770729  0.016090  0.01608  ...  345404    16:3425325-3770729  0.999600   7.0  rs40633|rs9790|rs8044546|rs4786427|rs6500550|r...   3425325
+7858  1.145000e+00  16  13.0  26646032       NaN      NaN  ...   85731  16:26560301-26646032  1.000000   5.0   rs1423086|rs2520126|rs11866811|rs237131|rs237142  26560301
+7843  1.434000e+00  16  13.0  26660902       NaN      NaN  ...  100601  16:26560301-26660902  1.000000   6.0  rs1423086|rs2520126|rs11866811|rs237131|rs2371...  26560301
+7517  5.564000e-01  16   9.0  83284405       NaN      NaN  ...   28028  16:83256377-83284405  1.000000   4.0            rs10514587|rs2113296|rs889722|rs8053948  83256377
+
+[10383 rows x 13 columns]
+Created omnibus outfile...
+Created non omnibus outfile...
+Created not filtered outfile...
+Done! DataFrame is merged.
+
+Time of finish - 2023-07-19 15:07:16. 
+            
+Time of executing - 0:00:21.986372.
+
+Time of start - 2023-07-19 15:07:54
+Arguments in use: 
+ - matrix filepath /mnt/wd/nsap/in_data1/chr17_matrix.ld 
+ - snplist filepath /mnt/wd/nsap/in_data1/chr17.snplist 
+ - method all 
+ - chr 17 
+ - eps 0.75 
+ - cluster_selection_epsilon 0.7 
+ - min_samples 2 
+
+
+all algorithm will be used...
+
+Extracting SNP list data from file...
+The SNP list for 17 chromosome is: 
+['rs1136388' 'rs4617924' 'rs4073769' ... 'rs9901757' 'rs4986140'
+ 'rs7224733']
+With length of: 1962
+Extracting matrix data from file...
+Reshaping arrays...
+
+Performing clustering with DBSCAN...
+Estimated number of clusters: 364
+Silhouette score:  0.17003368076431083
+Calinski-Harabasz score:  3.7069242820269666
+
+Writting results to database...
+
+Performing clustering with HDBSCAN...
+________________________________________________________________________________
+[Memory] Calling hdbscan.hdbscan_._hdbscan_generic...
+_hdbscan_generic(array([[0.      , ..., 0.998459],
+       ...,
+       [0.998459, ..., 0.      ]]), 2, 1.0, 'precomputed', None, 40, False)
+__________________________________________________hdbscan_generic - 0.2s, 0.0min
+Estimated number of clusters: 318
+Silhouette score:  0.0990655564813578
+Calinski-Harabasz score:  3.0435632045940313
+
+Writting results to database...
+Joinning SNP locations for 'A_chr17_CSM07MS2_EPS075MS2' table...
+318 HDBSCAN clusters for chromosome 17 has been written to the outfile.
+364 DBSCAN clusters for chromosome 17 has been written to the outfile.
+Haplotype restoring and testing for chromosome 17 is done!
+Working with file for 17 chromosome...
+             CHISQ CHR   DF       END      F_A      F_U  ...  LENGTH                 LOCUS         P  SIZE                                               SNPS     START
+2371  1.399000e+01  17  2.0  54859188      NaN      NaN  ...   16633  17:54842555-54859188  0.000916   2.0                                   rs963292|rs17202  54842555
+123   1.057000e+01  17  1.0   2832092  0.54150  0.61690  ...    6554    17:2825538-2832092  0.001148   2.0                                rs4790386|rs4790102   2825538
+2658  1.043000e+01  17  1.0  64556774  0.01464  0.03570  ...   89910  17:64466864-64556774  0.001238   2.0                                rs3848423|rs7211269  64466864
+2374  9.927000e+00  17  1.0  54859188  0.18490  0.24380  ...   16633  17:54842555-54859188  0.001629   2.0                                   rs963292|rs17202  54842555
+3027  9.674000e+00  17  1.0  70847518  0.06589  0.10420  ...   71364  17:70776154-70847518  0.001869   3.0                     rs12450445|rs7406107|rs4793316  70776154
+...            ...  ..  ...       ...      ...      ...  ...     ...                   ...       ...   ...                                                ...       ...
+2451  6.924000e-07  17  1.0  56847945  0.04564  0.04563  ...  423235  17:56424710-56847945  0.999300   6.0  rs757485|rs10515157|rs2680698|rs7211294|rs9916...  56424710
+50    1.508000e-02  17  3.0    815668      NaN      NaN  ...   15821      17:799847-815668  0.999500   2.0                                   rs2114|rs9895445    799847
+2556  2.598000e-07  17  1.0  62037685  0.32310  0.32310  ...   31678  17:62006007-62037685  0.999600   3.0                     rs12946669|rs2070776|rs9894841  62006007
+1798  2.107000e-07  17  1.0  43183028  0.14840  0.14840  ...  484013  17:42699015-43183028  0.999600  10.0  rs8074387|rs11656000|rs17745948|rs2070935|rs72...  42699015
+810   1.548000e-09  17  1.0  16758204  0.03402  0.03402  ...  248287  17:16509917-16758204  1.000000   4.0            rs1005369|rs3813762|rs8068349|rs9903427  16509917
+
+[3771 rows x 13 columns]
+Created omnibus outfile...
+Created non omnibus outfile...
+Created not filtered outfile...
+Done! DataFrame is merged.
+Working with file for 17 chromosome...
+             CHISQ CHR    DF       END      F_A      F_U  ...  LENGTH                 LOCUS         P  SIZE                                               SNPS     START
+7306  1.216000e+01  17   1.0  78065594  0.08817  0.13730  ...   89459  17:77976135-78065594  0.000488   3.0                      rs4074023|rs8082554|rs4889954  77976135
+4170  1.199000e+01  17   1.0  12791868  0.01081  0.03114  ...   67261  17:12724607-12791868  0.000535   5.0  rs3785732|rs3785731|rs7220143|rs12941385|rs479...  12724607
+5252  1.193000e+01  17   1.0  35080235  0.20670  0.14330  ...   30706  17:35049529-35080235  0.000553   2.0                                 rs9908590|rs756060  35049529
+3458  1.112000e+01  17   1.0  53303389  0.23790  0.30580  ...   23956  17:53279433-53303389  0.000852   2.0                                 rs7211784|rs740350  53279433
+245   1.399000e+01  17   2.0  54859188      NaN      NaN  ...   16633  17:54842555-54859188  0.000916   2.0                                   rs963292|rs17202  54842555
+...            ...  ..   ...       ...      ...      ...  ...     ...                   ...       ...   ...                                                ...       ...
+7632  1.018000e-07  17   1.0  29763373  0.05907  0.05907  ...  232664  17:29530709-29763373  0.999700   5.0  rs1013948|rs11080149|rs1048317|rs7503263|rs129...  29530709
+6414  7.981000e+00  17  26.0  79622899      NaN      NaN  ...  257733  17:79365166-79622899  0.999700   9.0  rs8070792|rs1531554|rs6565570|rs7406505|rs7342...  79365166
+6388  6.648000e+00  17  24.0  79658100      NaN      NaN  ...  292934  17:79365166-79658100  0.999800  10.0  rs8070792|rs1531554|rs6565570|rs7406505|rs7342...  79365166
+1433  1.406000e-08  17   1.0  76504429  0.01189  0.01189  ...   13235  17:76491194-76504429  0.999900   6.0  rs11077375|rs930572|rs6501225|rs9894913|rs9902...  76491194
+8103  1.548000e-09  17   1.0  16758204  0.03402  0.03402  ...  248287  17:16509917-16758204  1.000000   4.0            rs1005369|rs3813762|rs8068349|rs9903427  16509917
+
+[10631 rows x 13 columns]
+Created omnibus outfile...
+Created non omnibus outfile...
+Created not filtered outfile...
+Done! DataFrame is merged.
+
+Time of finish - 2023-07-19 15:08:15. 
+            
+Time of executing - 0:00:21.005908.
+
+Time of start - 2023-07-19 15:08:23
+Arguments in use: 
+ - matrix filepath /mnt/wd/nsap/in_data1/chr18_matrix.ld 
+ - snplist filepath /mnt/wd/nsap/in_data1/chr18.snplist 
+ - method all 
+ - chr 18 
+ - eps 0.8 
+ - cluster_selection_epsilon 0.65 
+ - min_samples 2 
+
+
+all algorithm will be used...
+
+Extracting SNP list data from file...
+The SNP list for 18 chromosome is: 
+['rs4797697' 'rs672856' 'rs620837' ... 'rs11662458' 'rs588556' 'rs7233553']
+With length of: 2121
+Extracting matrix data from file...
+Reshaping arrays...
+
+Performing clustering with DBSCAN...
+Estimated number of clusters: 419
+Silhouette score:  0.16654764721674753
+Calinski-Harabasz score:  3.5749941097026294
+
+Writting results to database...
+
+Performing clustering with HDBSCAN...
+________________________________________________________________________________
+[Memory] Calling hdbscan.hdbscan_._hdbscan_generic...
+_hdbscan_generic(array([[0.      , ..., 0.999825],
+       ...,
+       [0.999825, ..., 0.      ]]), 2, 1.0, 'precomputed', None, 40, False)
+__________________________________________________hdbscan_generic - 0.2s, 0.0min
+Estimated number of clusters: 346
+Silhouette score:  0.09189735789082452
+Calinski-Harabasz score:  3.077835140620387
+
+Writting results to database...
+Joinning SNP locations for 'A_chr18_CSM065MS2_EPS08MS2' table...
+346 HDBSCAN clusters for chromosome 18 has been written to the outfile.
+419 DBSCAN clusters for chromosome 18 has been written to the outfile.
+Haplotype restoring and testing for chromosome 18 is done!
+Working with file for 18 chromosome...
+             CHISQ CHR   DF       END      F_A      F_U  ...  LENGTH                 LOCUS         P  SIZE                                               SNPS     START
+722   1.457000e+01  18  1.0  12921361  0.63090  0.71580  ...   53392  18:12867969-12921361  0.000135   2.0                              rs11080606|rs11080612  12867969
+3476  1.185000e+01  18  1.0  46459323  0.17440  0.11550  ...    5860  18:46453463-46459323  0.000578   2.0                                rs4939827|rs2337107  46453463
+309   1.088000e+01  18  1.0   5866947  0.66960  0.74100  ...    9856    18:5857091-5866947  0.000973   2.0                               rs11662763|rs9947332   5857091
+3471  1.075000e+01  18  1.0  46461786  0.17220  0.11620  ...    8323  18:46453463-46461786  0.001045   3.0                      rs4939827|rs2337107|rs7238442  46453463
+718   1.560000e+01  18  3.0  12921361      NaN      NaN  ...   53392  18:12867969-12921361  0.001367   2.0                              rs11080606|rs11080612  12867969
+...            ...  ..  ...       ...      ...      ...  ...     ...                   ...       ...   ...                                                ...       ...
+1116  1.954000e-06  18  1.0  22452090  0.07610  0.07608  ...  316262  18:22135828-22452090  0.998900  10.0  rs8096377|rs1547874|rs1894019|rs1668145|rs1668...  22135828
+1401  1.964000e-06  18  1.0  23473708  0.02854  0.02855  ...   77361  18:23396347-23473708  0.998900   8.0  rs9957300|rs12608228|rs4800666|rs4800669|rs178...  23396347
+2952  3.437000e-01  18  6.0  40438667      NaN      NaN  ...  220599  18:40218068-40438667  0.999300   3.0                        rs3861286|rs612939|rs656617  40218068
+2408  3.619000e-07  18  1.0  34907964  0.01851  0.01851  ...   47106  18:34860858-34907964  0.999500   5.0    rs1662917|rs1662927|rs3897638|rs622750|rs655931  34860858
+2137  2.675000e-07  18  1.0  29890042  0.03750  0.03750  ...   51524  18:29838518-29890042  0.999600   2.0                                  rs660959|rs616601  29838518
+
+[6105 rows x 13 columns]
+Created omnibus outfile...
+Created non omnibus outfile...
+Created not filtered outfile...
+Done! DataFrame is merged.
+Working with file for 18 chromosome...
+             CHISQ CHR   DF       END      F_A      F_U  ...  LENGTH                 LOCUS         P  SIZE                                               SNPS     START
+3568  1.449000e+01  18  1.0   9984478  0.02856  0.06447  ...  127193    18:9857285-9984478  0.000141   8.0  rs2017791|rs492681|rs29214|rs492369|rs29145|rs...   9857285
+1953  1.443000e+01  18  1.0  28265420  0.00932  0.03702  ...  239273  18:28026147-28265420  0.000146  12.0  rs1348336|rs7230529|rs9944894|rs988935|rs12373...  28026147
+1473  1.371000e+01  18  1.0  72033783  0.13710  0.07814  ...  126007  18:71907776-72033783  0.000213   6.0  rs1024908|rs1790821|rs3813106|rs4328535|rs1296...  71907776
+1464  1.334000e+01  18  1.0  72037334  0.13730  0.07900  ...  129558  18:71907776-72037334  0.000260   7.0  rs1024908|rs1790821|rs3813106|rs4328535|rs1296...  71907776
+5456  1.232000e+01  18  1.0   5877869  0.35690  0.43640  ...   20778    18:5857091-5877869  0.000447   2.0                               rs11662763|rs9789183   5857091
+...            ...  ..  ...       ...      ...      ...  ...     ...                   ...       ...   ...                                                ...       ...
+3563  6.781000e-07  18  1.0   9984478  0.06484  0.06485  ...  127193    18:9857285-9984478  0.999300   8.0  rs2017791|rs492681|rs29214|rs492369|rs29145|rs...   9857285
+1215  8.377000e-07  18  1.0  71626962  0.06553  0.06554  ...  121451  18:71505511-71626962  0.999300   4.0            rs1560434|rs1560430|rs4891530|rs2850520  71505511
+648   1.313000e-02  18  3.0   2485798      NaN      NaN  ...   33546    18:2452252-2485798  0.999600   2.0                                rs3914786|rs2347267   2452252
+2488  6.485000e-08  18  1.0  29797478  0.02251  0.02251  ...   18273  18:29779205-29797478  0.999800   4.0            rs1561816|rs2241891|rs233223|rs10502584  29779205
+9484  7.062000e-08  18  1.0  33471784  0.05823  0.05823  ...  179425  18:33292359-33471784  0.999800   4.0            rs2051291|rs1787216|rs9948792|rs4559973  33292359
+
+[10613 rows x 13 columns]
+Created omnibus outfile...
+Created non omnibus outfile...
+Created not filtered outfile...
+Done! DataFrame is merged.
+
+Time of finish - 2023-07-19 15:08:47. 
+            
+Time of executing - 0:00:23.975131.
+
+Time of start - 2023-07-19 15:08:56
+Arguments in use: 
+ - matrix filepath /mnt/wd/nsap/in_data1/chr19_matrix.ld 
+ - snplist filepath /mnt/wd/nsap/in_data1/chr19.snplist 
+ - method all 
+ - chr 19 
+ - eps 0.8 
+ - cluster_selection_epsilon 0.75 
+ - min_samples 2 
+
+
+all algorithm will be used...
+
+Extracting SNP list data from file...
+The SNP list for 19 chromosome is: 
+['rs1020382' 'rs12459906' 'rs10409452' ... 'rs3764536' 'rs11667591'
+ 'rs12052202']
+With length of: 1276
+Extracting matrix data from file...
+Reshaping arrays...
+
+Performing clustering with DBSCAN...
+Estimated number of clusters: 217
+Silhouette score:  0.14344660764775738
+Calinski-Harabasz score:  3.2124526109604843
+
+Writting results to database...
+
+Performing clustering with HDBSCAN...
+________________________________________________________________________________
+[Memory] Calling hdbscan.hdbscan_._hdbscan_generic...
+_hdbscan_generic(array([[0.      , ..., 0.999303],
+       ...,
+       [0.999303, ..., 0.      ]]), 2, 1.0, 'precomputed', None, 40, False)
+__________________________________________________hdbscan_generic - 0.1s, 0.0min
+Estimated number of clusters: 211
+Silhouette score:  0.07396269949456347
+Calinski-Harabasz score:  2.4630523636275705
+
+Writting results to database...
+Joinning SNP locations for 'A_chr19_CSM075MS2_EPS08MS2' table...
+211 HDBSCAN clusters for chromosome 19 has been written to the outfile.
+217 DBSCAN clusters for chromosome 19 has been written to the outfile.
+Haplotype restoring and testing for chromosome 19 is done!
+Working with file for 19 chromosome...
+             CHISQ CHR    DF       END      F_A      F_U  ...  LENGTH                 LOCUS         P  SIZE                                               SNPS     START
+877   1.150000e+01  19   1.0  16352403  0.05209  0.09016  ...   38479  19:16313924-16352403  0.000696   2.0                               rs12461400|rs2262138  16313924
+1662  1.116000e+01  19   1.0  33652247  0.60060  0.67640  ...   73119  19:33579128-33652247  0.000836   2.0                                rs7259333|rs8113143  33579128
+2234  9.757000e+00  19   1.0  52601399  0.59660  0.52460  ...  105596  19:52495803-52601399  0.001786   3.0                     rs2288887|rs4145658|rs11666341  52495803
+1658  1.459000e+01  19   3.0  33652247      NaN      NaN  ...   73119  19:33579128-33652247  0.002200   2.0                                rs7259333|rs8113143  33579128
+2239  9.345000e+00  19   1.0  52588718  0.61190  0.54190  ...   92915  19:52495803-52588718  0.002236   2.0                                rs2288887|rs4145658  52495803
+...            ...  ..   ...       ...      ...      ...  ...     ...                   ...       ...   ...                                                ...       ...
+1077  1.571000e+00  19  10.0  23430436      NaN      NaN  ...  276686  19:23153750-23430436  0.998700   4.0             rs289332|rs771351|rs10424248|rs7254300  23153750
+1637  1.819000e-06  19   1.0  33409413  0.15970  0.15970  ...   59925  19:33349488-33409413  0.998900   5.0  rs2287879|rs1007160|rs745961|rs10425973|rs2278404  33349488
+582   5.696000e-07  19   1.0  12724645  0.56410  0.56410  ...   69733  19:12654912-12724645  0.999400   2.0                                 rs8102143|rs983149  12654912
+1468  2.880000e+00  19  15.0  30050566      NaN      NaN  ...  144052  19:29906514-30050566  0.999700   7.0  rs4805397|rs4805409|rs4805420|rs2195954|rs2082...  29906514
+1506  4.176000e-08  19   1.0  30007635  0.09167  0.09166  ...  101121  19:29906514-30007635  0.999800   5.0  rs4805397|rs4805409|rs4805420|rs2195954|rs2082455  29906514
+
+[2651 rows x 13 columns]
+Created omnibus outfile...
+Created non omnibus outfile...
+Created not filtered outfile...
+Done! DataFrame is merged.
+Working with file for 19 chromosome...
+             CHISQ CHR   DF       END      F_A      F_U  ...  LENGTH                 LOCUS         P  SIZE                                               SNPS     START
+885   1.540000e+01  19  1.0  52588718  0.07794  0.13120  ...  231927  19:52356791-52588718  0.000087   4.0            rs7256036|rs1056294|rs2288887|rs4145658  52356791
+4857  1.531000e+01  19  1.0   7837306  0.40630  0.31740  ...   67740    19:7769566-7837306  0.000091   3.0                       rs753733|rs10518270|rs608773   7769566
+2091  1.150000e+01  19  1.0  16352403  0.05209  0.09016  ...   38479  19:16313924-16352403  0.000696   2.0                               rs12461400|rs2262138  16313924
+2080  1.132000e+01  19  1.0  16406034  0.03655  0.06920  ...   92110  19:16313924-16406034  0.000769   4.0            rs12461400|rs2262138|rs3855681|rs390017  16313924
+2087  1.092000e+01  19  1.0  16398314  0.03665  0.06850  ...   84390  19:16313924-16398314  0.000953   3.0                     rs12461400|rs2262138|rs3855681  16313924
+...            ...  ..  ...       ...      ...      ...  ...     ...                   ...       ...   ...                                                ...       ...
+3255  1.242000e-03  19  2.0  46512517      NaN      NaN  ...    1171  19:46511346-46512517  0.999400   2.0                                 rs2287304|rs759623  46511346
+5542  3.703000e-07  19  1.0  14916571  0.50160  0.50160  ...   18323  19:14898248-14916571  0.999500   2.0                                rs8107904|rs8103247  14898248
+1964  1.939000e-07  19  1.0   4292597  0.36080  0.36080  ...   12411    19:4280186-4292597  0.999600   2.0                                rs10419363|rs888932   4280186
+958   4.807000e-08  19  1.0   7553021  0.03919  0.03919  ...  132798    19:7420223-7553021  0.999800   5.0  rs11879985|rs8100029|rs9329383|rs2303146|rs374...   7420223
+446   3.029000e-08  19  1.0  54682975  0.01067  0.01067  ...   43107  19:54639868-54682975  0.999900   3.0                         rs4806716|rs641738|rs40167  54639868
+
+[6366 rows x 13 columns]
+Created omnibus outfile...
+Created non omnibus outfile...
+Created not filtered outfile...
+Done! DataFrame is merged.
+
+Time of finish - 2023-07-19 15:09:08. 
+            
+Time of executing - 0:00:12.231312.
+
+Time of start - 2023-07-19 15:09:15
+Arguments in use: 
+ - matrix filepath /mnt/wd/nsap/in_data1/chr20_matrix.ld 
+ - snplist filepath /mnt/wd/nsap/in_data1/chr20.snplist 
+ - method all 
+ - chr 20 
+ - eps 0.75 
+ - cluster_selection_epsilon 0.65 
+ - min_samples 2 
+
+
+all algorithm will be used...
+
+Extracting SNP list data from file...
+The SNP list for 20 chromosome is: 
+['rs6086616' 'rs6515824' 'rs6116236' ... 'rs2427621' 'rs2427622'
+ 'rs2427638']
+With length of: 1790
+Extracting matrix data from file...
+Reshaping arrays...
+
+Performing clustering with DBSCAN...
+Estimated number of clusters: 336
+Silhouette score:  0.17217824696570272
+Calinski-Harabasz score:  3.6724313568622384
+
+Writting results to database...
+
+Performing clustering with HDBSCAN...
+________________________________________________________________________________
+[Memory] Calling hdbscan.hdbscan_._hdbscan_generic...
+_hdbscan_generic(array([[0.     , ..., 0.99946],
+       ...,
+       [0.99946, ..., 0.     ]]), 2, 1.0, 'precomputed', None, 40, False)
+__________________________________________________hdbscan_generic - 0.1s, 0.0min
+Estimated number of clusters: 292
+Silhouette score:  0.08820753787895406
+Calinski-Harabasz score:  2.9090291617532706
+
+Writting results to database...
+Joinning SNP locations for 'A_chr20_CSM065MS2_EPS075MS2' table...
+292 HDBSCAN clusters for chromosome 20 has been written to the outfile.
+336 DBSCAN clusters for chromosome 20 has been written to the outfile.
+Haplotype restoring and testing for chromosome 20 is done!
+Working with file for 20 chromosome...
+          CHISQ CHR   DF       END      F_A      F_U  ...  LENGTH                 LOCUS         P  SIZE                                               SNPS     START
+2747  17.760000  20  1.0  52814015  0.08872  0.14870  ...   11026  20:52802989-52814015  0.000025   3.0                       rs2585423|rs765058|rs2256661  52802989
+2754  10.980000  20  1.0  52804492  0.11270  0.16390  ...    1503  20:52802989-52804492  0.000919   2.0                                 rs2585423|rs765058  52802989
+2745  20.320000  20  5.0  52814015      NaN      NaN  ...   11026  20:52802989-52814015  0.001088   3.0                       rs2585423|rs765058|rs2256661  52802989
+382    9.887000  20  1.0   5909565  0.38120  0.45320  ...    3786    20:5905779-5909565  0.001665   2.0                                    rs2821|rs400735   5905779
+3012   9.827000  20  1.0  57171596  0.20080  0.14360  ...    9393  20:57162203-57171596  0.001719   3.0                       rs218449|rs2903015|rs2281398  57162203
+...         ...  ..  ...       ...      ...      ...  ...     ...                   ...       ...   ...                                                ...       ...
+2121   0.033780  20  3.0  44928729      NaN      NaN  ...    9970  20:44918759-44928729  0.998400   2.0                                rs6032754|rs2425861  44918759
+2231   0.000004  20  1.0  46305112  0.05453  0.05455  ...   12963  20:46292149-46305112  0.998500   2.0                               rs2235734|rs11906661  46292149
+1620   0.000003  20  1.0  31184281  0.01278  0.01277  ...  517333  20:30666948-31184281  0.998700   8.0  rs242602|rs4911087|rs4243971|rs4911234|rs29355...  30666948
+2890   0.000002  20  1.0  54386945  0.37170  0.37170  ...   21243  20:54365702-54386945  0.998900   3.0                      rs6092176|rs4811626|rs8125625  54365702
+1493   0.000002  20  1.0  24623774  0.11740  0.11740  ...   33984  20:24589790-24623774  0.998900   4.0            rs6049811|rs1883924|rs4815293|rs6114812  24589790
+
+[3282 rows x 13 columns]
+Created omnibus outfile...
+Created non omnibus outfile...
+Created not filtered outfile...
+Done! DataFrame is merged.
+Working with file for 20 chromosome...
+             CHISQ CHR    DF       END      F_A      F_U  ...  LENGTH                 LOCUS         P  SIZE                                               SNPS     START
+7216  1.867000e+01  20   1.0  52814015  0.08149  0.14140  ...   28156  20:52785859-52814015  0.000016   4.0             rs4809959|rs2585423|rs765058|rs2256661  52785859
+5553  1.337000e+01  20   1.0  57171596  0.22130  0.15250  ...    6201  20:57165395-57171596  0.000256   2.0                                rs2903015|rs2281398  57165395
+5549  1.311000e+01  20   1.0  57330569  0.20430  0.13820  ...  165174  20:57165395-57330569  0.000294   3.0                      rs2903015|rs2281398|rs6026492  57165395
+8461  1.183000e+01  20   1.0  31865697  0.53900  0.61890  ...   15049  20:31850648-31865697  0.000583   2.0                                rs6141378|rs7262822  31850648
+5551  1.483000e+01  20   2.0  57171596      NaN      NaN  ...    6201  20:57165395-57171596  0.000602   2.0                                rs2903015|rs2281398  57165395
+...            ...  ..   ...       ...      ...      ...  ...     ...                   ...       ...   ...                                                ...       ...
+6611  1.179000e+00  20  10.0  17356566      NaN      NaN  ...  127822  20:17228744-17356566  0.999600   5.0  rs1578405|rs6044721|rs1934887|rs10485570|rs121...  17228744
+3754  5.662000e-08  20   1.0  18030357  0.02688  0.02688  ...  115414  20:17914943-18030357  0.999800   5.0   rs2180529|rs910901|rs7268634|rs2149474|rs4814689  17914943
+2606  1.105000e-08  20   1.0  58866889  0.06968  0.06968  ...   76886  20:58790003-58866889  0.999900   3.0                       rs596757|rs6100805|rs6027478  58790003
+6569  5.069000e+00  20  22.0  17457674      NaN      NaN  ...  228930  20:17228744-17457674  0.999900   7.0  rs1578405|rs6044721|rs1934887|rs10485570|rs121...  17228744
+7627  9.401000e-09  20   1.0  41981566  0.58000  0.58000  ...   58811  20:41922755-41981566  0.999900   2.0                                rs6030760|rs4239695  41922755
+
+[8828 rows x 13 columns]
+Created omnibus outfile...
+Created non omnibus outfile...
+Created not filtered outfile...
+Done! DataFrame is merged.
+
+Time of finish - 2023-07-19 15:09:33. 
+            
+Time of executing - 0:00:17.873770.
+
+Time of start - 2023-07-19 15:09:40
+Arguments in use: 
+ - matrix filepath /mnt/wd/nsap/in_data1/chr21_matrix.ld 
+ - snplist filepath /mnt/wd/nsap/in_data1/chr21.snplist 
+ - method all 
+ - chr 21 
+ - eps 0.8 
+ - cluster_selection_epsilon 0.6 
+ - min_samples 2 
+
+
+all algorithm will be used...
+
+Extracting SNP list data from file...
+The SNP list for 21 chromosome is: 
+['rs1985740' 'rs3115511' 'rs7276618' ... 'rs2839327' 'rs1981331'
+ 'rs2839376']
+With length of: 1217
+Extracting matrix data from file...
+Reshaping arrays...
+
+Performing clustering with DBSCAN...
+Estimated number of clusters: 239
+Silhouette score:  0.16959357020572582
+Calinski-Harabasz score:  3.6073368797574608
+
+Writting results to database...
+
+Performing clustering with HDBSCAN...
+________________________________________________________________________________
+[Memory] Calling hdbscan.hdbscan_._hdbscan_generic...
+_hdbscan_generic(array([[0.      , ..., 0.999194],
+       ...,
+       [0.999194, ..., 0.      ]]), 2, 1.0, 'precomputed', None, 40, False)
+__________________________________________________hdbscan_generic - 0.1s, 0.0min
+Estimated number of clusters: 203
+Silhouette score:  0.100371102081189
+Calinski-Harabasz score:  3.2648517493625784
+
+Writting results to database...
+Joinning SNP locations for 'A_chr21_CSM06MS2_EPS08MS2' table...
+203 HDBSCAN clusters for chromosome 21 has been written to the outfile.
+239 DBSCAN clusters for chromosome 21 has been written to the outfile.
+Haplotype restoring and testing for chromosome 21 is done!
+Working with file for 21 chromosome...
+             CHISQ CHR   DF       END      F_A      F_U  ...  LENGTH                 LOCUS         P  SIZE                                               SNPS     START
+3736  1.401000e+01  21  1.0  44437142  0.28730  0.20980  ...  199598  21:44237544-44437142  0.000182   3.0                       rs2839585|rs234692|rs3737434  44237544
+3729  1.344000e+01  21  1.0  44448718  0.28770  0.21170  ...  211174  21:44237544-44448718  0.000246   4.0             rs2839585|rs234692|rs3737434|rs2839627  44237544
+1012  1.335000e+01  21  1.0  28066700  0.09307  0.14600  ...   40201  21:28026499-28066700  0.000259   4.0            rs2830322|rs2830377|rs2830400|rs2830402  28026499
+1005  1.320000e+01  21  1.0  28070696  0.09141  0.14340  ...   44197  21:28026499-28070696  0.000280   5.0      rs2830322|rs2830377|rs2830400|rs2830402|rs773  28026499
+2481  1.257000e+01  21  1.0  35444498  0.46500  0.54820  ...   17643  21:35426855-35444498  0.000391   2.0                                rs2834371|rs4817616  35426855
+...            ...  ..  ...       ...      ...      ...  ...     ...                   ...       ...   ...                                                ...       ...
+158   8.345000e-07  21  1.0  17088977  0.15530  0.15540  ...   56254  21:17032723-17088977  0.999300   2.0                                  rs2823422|rs97928  17032723
+2876  8.777000e-07  21  1.0  37452919  0.11810  0.11810  ...  142563  21:37310356-37452919  0.999300   8.0  rs2835165|rs2178812|rs2835189|rs2835195|rs8126...  37310356
+3093  5.772000e-07  21  1.0  39084490  0.14450  0.14450  ...   31906  21:39052584-39084490  0.999400   2.0                                rs2898334|rs2835908  39052584
+3124  4.311000e-08  21  1.0  39183533  0.37180  0.37180  ...   17765  21:39165768-39183533  0.999800   2.0                                rs4817890|rs2211842  39165768
+1436  1.460000e-09  21  1.0  30244170  0.05048  0.05048  ...  244200  21:29999970-30244170  1.000000  10.0  rs981931|rs2831938|rs1236425|rs2831951|rs28320...  29999970
+
+[4157 rows x 13 columns]
+Created omnibus outfile...
+Created non omnibus outfile...
+Created not filtered outfile...
+Done! DataFrame is merged.
+Working with file for 21 chromosome...
+             CHISQ CHR    DF       END      F_A     F_U  ...  LENGTH                 LOCUS         P  SIZE                                               SNPS     START
+4979  1.335000e+01  21   1.0  28066700  0.09307  0.1460  ...   40201  21:28026499-28066700  0.000259   4.0            rs2830322|rs2830377|rs2830400|rs2830402  28026499
+4972  1.320000e+01  21   1.0  28070696  0.09141  0.1434  ...   44197  21:28026499-28070696  0.000280   5.0      rs2830322|rs2830377|rs2830400|rs2830402|rs773  28026499
+2906  1.257000e+01  21   1.0  35444498  0.46500  0.5482  ...   17643  21:35426855-35444498  0.000391   2.0                                rs2834371|rs4817616  35426855
+1876  1.250000e+01  21   1.0  43354828  0.34980  0.2721  ...    5788  21:43349040-43354828  0.000408   2.0                                rs7280126|rs8132865  43349040
+4986  1.181000e+01  21   1.0  28064877  0.09431  0.1438  ...   38378  21:28026499-28064877  0.000590   3.0                      rs2830322|rs2830377|rs2830400  28026499
+...            ...  ..   ...       ...      ...     ...  ...     ...                   ...       ...   ...                                                ...       ...
+4670  4.367000e+00  21  18.0  40818379      NaN     NaN  ...  329352  21:40489027-40818379  0.999600   8.0  rs2836891|rs1013129|rs2836902|rs2836912|rs6517...  40489027
+3747  1.084000e-07  21   1.0  46277968  0.21650  0.2165  ...   90583  21:46187385-46277968  0.999700   5.0   rs6518204|rs235340|rs9808690|rs2838704|rs2838713  46187385
+4405  1.726000e-07  21   1.0  24790421  0.26610  0.2661  ...   93439  21:24696982-24790421  0.999700   5.0  rs2828068|rs12483180|rs1354479|rs1394369|rs282...  24696982
+4700  8.590000e-08  21   1.0  40788083  0.12530  0.1253  ...  299056  21:40489027-40788083  0.999800   7.0  rs2836891|rs1013129|rs2836902|rs2836912|rs6517...  40489027
+2104  2.475000e-08  21   1.0  41790020  0.10680  0.1068  ...   64717  21:41725303-41790020  0.999900   4.0            rs2837574|rs2837583|rs2837587|rs1882757  41725303
+
+[5890 rows x 13 columns]
+Created omnibus outfile...
+Created non omnibus outfile...
+Created not filtered outfile...
+Done! DataFrame is merged.
+
+Time of finish - 2023-07-19 15:09:53. 
+            
+Time of executing - 0:00:12.841448.
+
+Time of start - 2023-07-19 15:10:02
+Arguments in use: 
+ - matrix filepath /mnt/wd/nsap/in_data1/chr22_matrix.ld 
+ - snplist filepath /mnt/wd/nsap/in_data1/chr22.snplist 
+ - method all 
+ - chr 22 
+ - eps 0.75 
+ - cluster_selection_epsilon 0.65 
+ - min_samples 2 
+
+
+all algorithm will be used...
+
+Extracting SNP list data from file...
+The SNP list for 22 chromosome is: 
+['rs2096537' 'rs2190742' 'rs9605145' ... 'rs6009945' 'rs9616812'
+ 'rs9616816']
+With length of: 1149
+Extracting matrix data from file...
+Reshaping arrays...
+
+Performing clustering with DBSCAN...
+Estimated number of clusters: 211
+Silhouette score:  0.16886013457621188
+Calinski-Harabasz score:  3.770809454477644
+
+Writting results to database...
+
+Performing clustering with HDBSCAN...
+________________________________________________________________________________
+[Memory] Calling hdbscan.hdbscan_._hdbscan_generic...
+_hdbscan_generic(array([[0.      , ..., 0.999996],
+       ...,
+       [0.999996, ..., 0.      ]]), 2, 1.0, 'precomputed', None, 40, False)
+__________________________________________________hdbscan_generic - 0.1s, 0.0min
+Estimated number of clusters: 181
+Silhouette score:  0.09598599126658268
+Calinski-Harabasz score:  3.219278817950997
+
+Writting results to database...
+Joinning SNP locations for 'A_chr22_CSM065MS2_EPS075MS2' table...
+181 HDBSCAN clusters for chromosome 22 has been written to the outfile.
+211 DBSCAN clusters for chromosome 22 has been written to the outfile.
+Haplotype restoring and testing for chromosome 22 is done!
+Working with file for 22 chromosome...
+          CHISQ CHR    DF       END      F_A      F_U  ...  LENGTH                 LOCUS         P  SIZE                                               SNPS     START
+1037  38.270000  22  14.0  31249333      NaN      NaN  ...  178840  22:31070493-31249333  0.000472   8.0  rs5753271|rs136369|rs136354|rs136337|rs136319|...  31070493
+1024  11.060000  22   1.0  31366675  0.07079  0.11500  ...  296182  22:31070493-31366675  0.000884   9.0  rs5753271|rs136369|rs136354|rs136337|rs136319|...  31070493
+1050  10.730000  22   1.0  31249333  0.07904  0.03897  ...  178840  22:31070493-31249333  0.001057   8.0  rs5753271|rs136369|rs136354|rs136337|rs136319|...  31070493
+1043  10.560000  22   1.0  31249333  0.07180  0.11490  ...  178840  22:31070493-31249333  0.001158   8.0  rs5753271|rs136369|rs136354|rs136337|rs136319|...  31070493
+442    9.704000  22   1.0  22296119  0.11110  0.16120  ...  274114  22:22022005-22296119  0.001839   7.0  rs1103229|rs8135758|rs5999264|rs6000043|rs2400...  22022005
+...         ...  ..   ...       ...      ...      ...  ...     ...                   ...       ...   ...                                                ...       ...
+2227   0.000042  22   1.0  45148348  0.19690  0.19700  ...   17920  22:45130428-45148348  0.994900   2.0                                 rs132405|rs9614902  45130428
+63     0.059540  22   3.0  17593685      NaN      NaN  ...    7214  22:17586471-17593685  0.996200   2.0                                 rs2241046|rs887796  17586471
+1318   0.000008  22   1.0  34245401  0.01997  0.01999  ...  111505  22:34133896-34245401  0.997700  13.0  rs2283934|rs239330|rs239332|rs5999086|rs491508...  34133896
+1629   0.000006  22   1.0  37779713  0.07212  0.07215  ...   41092  22:37738621-37779713  0.998100   4.0           rs4821633|rs4821638|rs4821651|rs10854702  37738621
+2542   0.000002  22   1.0  48236240  0.02731  0.02729  ...   19418  22:48216822-48236240  0.998800   4.0             rs5768016|rs4823703|rs738744|rs4140399  48216822
+
+[2715 rows x 13 columns]
+Created omnibus outfile...
+Created non omnibus outfile...
+Created not filtered outfile...
+Done! DataFrame is merged.
+Working with file for 22 chromosome...
+             CHISQ CHR    DF       END      F_A      F_U  ...  LENGTH                 LOCUS         P  SIZE                                               SNPS     START
+5964  3.827000e+01  22  14.0  31249333      NaN      NaN  ...  178840  22:31070493-31249333  0.000472   8.0  rs5753271|rs136369|rs136354|rs136337|rs136319|...  31070493
+5977  1.073000e+01  22   1.0  31249333  0.07904  0.03897  ...  178840  22:31070493-31249333  0.001057   8.0  rs5753271|rs136369|rs136354|rs136337|rs136319|...  31070493
+5970  1.056000e+01  22   1.0  31249333  0.07180  0.11490  ...  178840  22:31070493-31249333  0.001158   8.0  rs5753271|rs136369|rs136354|rs136337|rs136319|...  31070493
+2273  8.359000e+00  22   1.0  19156117  0.21960  0.27670  ...    8676  22:19147441-19156117  0.003838   2.0                                 rs2096376|rs712964  19147441
+3741  8.131000e+00  22   1.0  24268120  0.01544  0.03481  ...   60158  22:24207962-24268120  0.004351   6.0  rs2330625|rs11913427|rs4822442|rs738806|rs6003...  24207962
+...            ...  ..   ...       ...      ...      ...  ...     ...                   ...       ...   ...                                                ...       ...
+3554  1.351000e-06  22   1.0  49436004  0.29880  0.29880  ...   69881  22:49366123-49436004  0.999100   5.0  rs4824067|rs5770661|rs1011642|rs2064542|rs5769840  49366123
+4771  8.406000e-07  22   1.0  40354981  0.17030  0.17030  ...  247999  22:40106982-40354981  0.999300   5.0     rs8140044|rs9941927|rs137977|rs713883|rs138000  40106982
+2312  1.275000e-03  22   2.0  47341758      NaN      NaN  ...   20638  22:47321120-47341758  0.999400   2.0                                 rs1569517|rs713783  47321120
+3860  6.147000e-07  22   1.0  24121378  0.01083  0.01083  ...   96948  22:24024430-24121378  0.999400   6.0  rs2330579|rs6003847|rs2070451|rs5759997|rs2298...  24024430
+2889  3.243000e-07  22   1.0  46018094  0.01758  0.01758  ...   43337  22:45974757-46018094  0.999500   3.0                      rs8138025|rs2071871|rs8143145  45974757
+
+[6030 rows x 13 columns]
+Created omnibus outfile...
+Created non omnibus outfile...
+Created not filtered outfile...
+Done! DataFrame is merged.
+
+Time of finish - 2023-07-19 15:10:16. 
+            
+Time of executing - 0:00:13.150768.
