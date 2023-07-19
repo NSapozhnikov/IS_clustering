@@ -1,5 +1,4 @@
-### This folder contains scripts for grid search, plotting and comparing
-    clusterization parameters
+### This folder contains scripts for grid search, plotting and comparing clusterization parameters
 
 # 1) best_params_search.py
      - contains a grid which is used in an exhaustive search of parameters. 
