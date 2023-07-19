@@ -42,6 +42,5 @@
        Bonferroni correction and writes an outfile. Plots p-value counts histogram.
      - requires helpers.R
 
-# To automatically perform steps 1-5 on all chromosomes use all_chr_pipe.py. But keep in mind
-  the clusterization parameters.
+# To automatically perform steps 1-5 on all chromosomes use all_chr_pipe.py. But keep in mind the clusterization parameters.
      python3 all_chr_pipe.py
