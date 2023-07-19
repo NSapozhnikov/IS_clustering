@@ -14,6 +14,7 @@ To plot a region:
    - takes bim file 
    - for every row appends a cluster number if any from hlist file
    - writes outfile (cluster_files/imp1/dbscan or hdbscan)
+   
    python3 restore-cluster-membership.py /mnt/wd/nsap/hlists/comp_param_chr1_A_CSM075MS2_hdbscan.hlist /mnt/wd/nsap/imp1/chr1.bim /mnt/wd/nsap/Clustering/plot_region/cluster_files/imp1/hdbscan/chr1.csv
 
 
